@@ -132,8 +132,8 @@
         User user = (User) session.getAttribute("user");
         if (user != null) {
       %>
-        <h2>Welcome, <%= user.getFirstName() %></h2>
-        
+        <h2>Welcome, <%= user.getName() %></h2>
+<%--         
         <div class="profile-info">
           <div class="profile-avatar">
             <% if (user.getProfileImage() != null) { %>
@@ -141,9 +141,9 @@
             <% } else { %>
               <%= user.getFirstName().charAt(0) %>
             <% } %>
-          </div>
+          </div> --%>
           
-          <div class="profile-details">
+      <%--     <div class="profile-details">
             <div class="info-group">
               <div class="info-label">Full Name</div>
               <div class="info-value"><%= user.getFirstName() %> <%= user.getLastName() %></div>
@@ -157,7 +157,7 @@
             <div class="info-group">
               <div class="info-label">Account Created</div>
               <div class="info-value"><%= user.getCreatedAt() %></div>
-            </div>
+            </div> --%>
             
             <a href="editProfile.jsp" class="button">Edit Profile</a>
             <a href="changePassword.jsp" class="button">Change Password</a>
